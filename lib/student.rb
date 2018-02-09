@@ -98,7 +98,7 @@ class Student
     sql = <<-SQL
       SELECT *
       FROM students
-      GROUP BY id
+      GROUP BY student.id
       LIMIT 1;
     SQL
     DB[:conn].execute(sql).collect do |row|
