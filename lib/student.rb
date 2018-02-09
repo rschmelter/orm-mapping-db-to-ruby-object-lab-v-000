@@ -93,6 +93,7 @@ class Student
       self.new_from_db(row)
     end
   end
+  students_10th = DB[:conn].execute("SELECT * FROM students WHERE grade = 10 LIMIT (?)", number)
 
 
 
