@@ -16,8 +16,9 @@ class Student
         SELECT *
         FROM students
       SQL
-
-      DB[:conn].execute(sql)
+   
+      DB[:conn].execute(sql).collect |row|
+        self.new_from_db(row)
     end
   end
 
