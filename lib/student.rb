@@ -74,7 +74,7 @@ class Student
   def self.students_below_12th_grade
     sql = <<-SQL
     SELECT *
-    FROM students_below_12th_grade
+    FROM students
     WHERE grade NOT 12
   SQL
   DB[:conn].execute(sql).collect do |row|
